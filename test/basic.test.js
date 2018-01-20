@@ -30,4 +30,9 @@ describe('basic test', () => {
     const stats = await compiler('./fixtures/basic.js', { loaderOptions: { name: 'sou' } });
     expect(stats.toJson().modules[0].source).toMatchSnapshot();
   });
+
+  test.only('test react component', async () => {
+    const stats = await compiler('./fixtures/reactComponent', { transformJS: true });
+    expect(stats.toJson().modules[6].source).toMatchSnapshot();
+  });
 });

@@ -5,6 +5,7 @@
         "node": "6",
         "browsers": ["last 2 versions", "ie >= 9"]
       }
-    }]
+    }],
+    "@babel/preset-react",
   ],
 }
