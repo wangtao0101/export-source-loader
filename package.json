@@ -1,10 +1,19 @@
 {
   "name": "export-source-loader",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "export source as a variable for javascript or typescript code",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "jest"
+    "build": "babel src -d dist",
+    "test": "jest",
+    "prepublish": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wangtao0101/export-source-loader.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wangtao0101/export-source-loader/issues"
   },
   "keywords": [
     "webpack",
