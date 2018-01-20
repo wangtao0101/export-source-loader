@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`escape test escape loader 1`] = `
+"const a = 1;
+export default a;
+
+// \`escape
+
+export var source = \`const a = 1;
+export default a;
+
+// \\\\\`escape
+\`"
+`;

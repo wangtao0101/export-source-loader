@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`basic test basic loader 1`] = `
+"const a = 1;
+export default a;
+
+export var source = \`const a = 1;
+export default a;
+\`"
+`;
+
+exports[`basic test loader with babel-loader 1`] = `
+"\\"use strict\\";
+
+Object.defineProperty(exports, \\"__esModule\\", {
+  value: true
+});
+exports.source = exports.default = void 0;
+var a = 1;
+var _default = a;
+exports.default = _default;
+var source = \\"const a = 1;\\\\nexport default a;\\\\n\\";
+exports.source = source;"
+`;
+
+exports[`basic test loader with option module = commonjs 1`] = `
+"const a = 1;
+export default a;
+
+module.exports.source = \`const a = 1;
+export default a;
+\`"
+`;
+
+exports[`basic test loader with option module expect es and commonjs 1`] = `"throw new Error(\\"Module build failed: ValidationError: export source loader Invalid Options\\\\n\\\\noptions.module should be equal to one of the allowed values\\\\n\\");"`;
+
+exports[`basic test loader with option name 1`] = `
+"const a = 1;
+export default a;
+
+export var sourceCode = \`const a = 1;
+export default a;
+\`"
+`;
+
+exports[`basic test loader with option name minLength < 5 1`] = `"throw new Error(\\"Module build failed: ValidationError: export source loader Invalid Options\\\\n\\\\noptions.name should NOT be shorter than 5 characters\\\\n\\");"`;

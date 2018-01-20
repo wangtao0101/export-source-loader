@@ -19,10 +19,12 @@ export default function loader(source) {
 
   validateOptions(schema, options, 'export source loader');
 
+  const escapedSource = source.replace('`', '\\`')
+
   const name = options.name || 'source';
   if (options.module === 'commonjs') {
-    return `${source}\nmodule.exports.${name} = \`${source}\``;
+    return `${source}\nmodule.exports.${name} = \`${escapedSource}\``;
   }
 
-  return `${source}\nexport var ${name} = \`${source}\``;
+  return `${source}\nexport var ${name} = \`${escapedSource}\``;
 };
