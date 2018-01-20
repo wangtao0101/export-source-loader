@@ -4,11 +4,11 @@ exports[`escape test escape loader 1`] = `
 "const a = 1;
 export default a;
 
-// \`escape
+// \`escape \`two
 
 export var source = \`const a = 1;
 export default a;
 
-// \\\\\`escape
+// \\\\\`escape \\\\\`two
 \`"
 `;
