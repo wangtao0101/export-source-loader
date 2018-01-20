@@ -1,0 +1,28 @@
+{
+  "name": "export-source-loader",
+  "version": "0.0.1",
+  "description": "export source as a variable for javascript or typescript code",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "webpack",
+    "javascript",
+    "typescript"
+  ],
+  "author": "wangtao0101",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "7.0.0-beta.36",
+    "@babel/core": "7.0.0-beta.36",
+    "@babel/preset-env": "7.0.0-beta.36",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-jest": "^22.1.0",
+    "babel-loader": "8.0.0-beta.0",
+    "jest": "^22.1.4",
+    "memory-fs": "^0.4.1",
+    "webpack": "^3.10.0"
+  },
+  "dependencies": {}
+}
