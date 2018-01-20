@@ -6,6 +6,7 @@ export default (fixture, options = {}) => {
 
   const {
     transformJS = false,
+    loaderOptions = undefined,
   } = options;
 
   const webpackConfig = {
@@ -20,6 +21,7 @@ export default (fixture, options = {}) => {
         test: /\.js$/,
         use: [{
           loader: path.resolve(__dirname, '../src/index.js'),
+          options: loaderOptions,
         }]
       }]
     }
